@@ -7,10 +7,113 @@
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": 1743793701355,
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1743793706049
+                }
+            ],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.3058103975535168,
+            "y": 0.4923547400611621,
+            "uniqueID": 1743793703904,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Creates a new rectangle."
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.5922528032619776,
+            "y": 0.5626911314984709,
+            "uniqueID": 1743793706049,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1743793703904
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "Export",
+            "name": "Export",
+            "x": 0.7777777777777777,
+            "y": 0.6055045871559632,
+            "uniqueID": 1743793709868,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1743793706049
+                },
+                {
+                    "name": "Resolution (dpi)",
+                    "ioValue": 96
+                },
+                {
+                    "name": "Part Name",
+                    "ioValue": "Simple_cube"
+                },
+                {
+                    "name": "File Type",
+                    "ioValue": "SVG"
+                }
+            ],
+            "description": "Export Atom, let's you choose a type of file to Export.",
+            "type": null,
+            "resolution": 96,
+            "importIndex": 0,
+            "fileName": null
+        }
+    ],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1743793703904,
+            "ap2ID": 1743793706049
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 1743793706049,
+            "ap2ID": 1743793709868
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1743793706049,
+            "ap2ID": 1743793701355
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
-    "compiledBom": {},
+    "compiledBom": [],
     "filetypeVersion": 1
 }
